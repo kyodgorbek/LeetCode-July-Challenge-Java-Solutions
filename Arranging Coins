@@ -1,0 +1,22 @@
+
+
+Arranging Coins Java Solution
+
+
+class Solution {
+    public int arrangeCoins(int n) {
+        if(n == 0){
+            return 0;
+        }
+    
+    
+        int current = 1;
+        int remainings = n-1;
+        while(remainings >= current + 1){
+            current++;
+            remainings = remainings - current;
+        }
+        
+    return current;
+    }
+}
